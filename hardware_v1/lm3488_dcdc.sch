@@ -275,7 +275,7 @@ Wire Wire Line
 	6650 2150 7250 2150
 Wire Wire Line
 	6650 2250 6800 2250
-Text GLabel 8600 2150 2    50   Input ~ 0
+Text GLabel 8600 3150 2    50   Input ~ 0
 +7V
 $Comp
 L Device:C_Small C8
@@ -341,15 +341,15 @@ F 3 "" H 800 3850 50  0001 C CNN
 	1    800  3850
 	1    0    0    -1  
 $EndComp
-Text GLabel 8600 2300 2    50   Input ~ 0
+Text GLabel 8600 3300 2    50   Input ~ 0
 FEEDBACK
 Wire Wire Line
-	8600 2300 8450 2300
+	8600 3300 8450 3300
 Wire Wire Line
-	8450 2300 8450 2150
-Connection ~ 8450 2150
+	8450 3300 8450 3150
+Connection ~ 8450 3150
 Wire Wire Line
-	8450 2150 8600 2150
+	8450 3150 8600 3150
 Text GLabel 800  3450 1    50   Input ~ 0
 FEEDBACK
 Wire Wire Line
@@ -578,7 +578,7 @@ Wire Wire Line
 Wire Wire Line
 	7600 3150 7600 3250
 Connection ~ 7600 3150
-Text GLabel 8600 3150 2    50   Input ~ 0
+Text GLabel 8600 2150 2    50   Input ~ 0
 +x
 $Comp
 L power:GND #PWR0116
@@ -660,32 +660,10 @@ L Device:D_Schottky_Small D2
 U 1 1 60153747
 P 7350 1200
 F 0 "D2" H 7350 995 50  0000 C CNN
-F 1 "MBRS3200T3G" H 7350 1086 50  0000 C CNN
-F 2 "Diode_SMD:D_SMA-SMB_Universal_Handsoldering" V 7350 1200 50  0001 C CNN
+F 1 "V2F22HM3/H" H 7350 1086 50  0000 C CNN
+F 2 "Diode_SMD:D_SMF" V 7350 1200 50  0001 C CNN
 F 3 "~" V 7350 1200 50  0001 C CNN
 	1    7350 1200
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:D_Schottky_Small D3
-U 1 1 601F0B84
-P 7350 2150
-F 0 "D3" H 7350 1945 50  0000 C CNN
-F 1 "MBRS3200T3G" H 7350 2036 50  0000 C CNN
-F 2 "Diode_SMD:D_SMA-SMB_Universal_Handsoldering" V 7350 2150 50  0001 C CNN
-F 3 "~" V 7350 2150 50  0001 C CNN
-	1    7350 2150
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:D_Schottky_Small D4
-U 1 1 601F1213
-P 7350 3150
-F 0 "D4" H 7350 2945 50  0000 C CNN
-F 1 "MBRS3200T3G" H 7350 3036 50  0000 C CNN
-F 2 "Diode_SMD:D_SMA-SMB_Universal_Handsoldering" V 7350 3150 50  0001 C CNN
-F 3 "~" V 7350 3150 50  0001 C CNN
-	1    7350 3150
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -730,9 +708,8 @@ Wire Wire Line
 	8000 2500 7600 2500
 Wire Wire Line
 	8000 2250 8000 2150
-Connection ~ 8000 2150
 Wire Wire Line
-	8000 2150 8450 2150
+	8000 3150 8450 3150
 $Comp
 L Device:C_Small C13
 U 1 1 6020E444
@@ -748,9 +725,6 @@ Wire Wire Line
 	7600 3150 8000 3150
 Wire Wire Line
 	8000 3250 8000 3150
-Connection ~ 8000 3150
-Wire Wire Line
-	8000 3150 8600 3150
 Wire Wire Line
 	8000 3450 8000 3500
 Wire Wire Line
@@ -808,17 +782,6 @@ Connection ~ 1050 3650
 Wire Wire Line
 	1050 3650 2450 3650
 $Comp
-L Device:D_Schottky_Small D1
-U 1 1 6024A48B
-P 4700 1650
-F 0 "D1" V 4654 1718 50  0000 L CNN
-F 1 "MBRS3200T3G" V 4745 1718 50  0000 L CNN
-F 2 "Diode_SMD:D_SMA-SMB_Universal_Handsoldering" V 4700 1650 50  0001 C CNN
-F 3 "~" V 4700 1650 50  0001 C CNN
-	1    4700 1650
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:C_Small C7
 U 1 1 601429B9
 P 4700 1250
@@ -861,5 +824,42 @@ F 2 "hardware_v1:eylet_connector" H 10250 2800 50  0001 C CNN
 F 3 "~" H 10250 2800 50  0001 C CNN
 	1    10250 2800
 	1    0    0    -1  
+$EndComp
+Connection ~ 8000 3150
+Wire Wire Line
+	8600 2150 8000 2150
+Connection ~ 8000 2150
+$Comp
+L Device:D_Schottky_Small D3
+U 1 1 602A7E84
+P 7350 2150
+F 0 "D3" H 7350 1945 50  0000 C CNN
+F 1 "V2F22HM3/H" H 7350 2036 50  0000 C CNN
+F 2 "Diode_SMD:D_SMF" V 7350 2150 50  0001 C CNN
+F 3 "~" V 7350 2150 50  0001 C CNN
+	1    7350 2150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Schottky_Small D4
+U 1 1 602A8151
+P 7350 3150
+F 0 "D4" H 7350 2945 50  0000 C CNN
+F 1 "V2F22HM3/H" H 7350 3036 50  0000 C CNN
+F 2 "Diode_SMD:D_SMF" V 7350 3150 50  0001 C CNN
+F 3 "~" V 7350 3150 50  0001 C CNN
+	1    7350 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Schottky_Small D1
+U 1 1 602A8604
+P 4700 1650
+F 0 "D1" V 4654 1718 50  0000 L CNN
+F 1 "V2F22HM3/H" V 4745 1718 50  0000 L CNN
+F 2 "Diode_SMD:D_SMF" V 4700 1650 50  0001 C CNN
+F 3 "~" V 4700 1650 50  0001 C CNN
+	1    4700 1650
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC
